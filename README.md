@@ -1,6 +1,6 @@
 # world-builder
 
-Another game made for college, using the modern OpenGL api this time.
+A game i made for the computer graphics subject in college.
 
 All of this was made in about one week!!
 
