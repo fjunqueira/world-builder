@@ -1,0 +1,12 @@
+bin/
+.clang_format
+.idea/
+.vscode/
+libs/
+build/
+tmp/
+GPATH
+GRTAGS
+GSYMS
+GTAGS
+
