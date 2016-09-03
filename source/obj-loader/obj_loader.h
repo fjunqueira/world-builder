@@ -8,7 +8,6 @@
 #include "mesh.h"
 #include "mtl_reader.h"
 #include "obj_reader.h"
-#include "texture_reader.h"
 
 struct ObjInfo
 {

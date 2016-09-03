@@ -8,7 +8,6 @@ ObjInfo ObjLoader::LoadObj(const std::string& obj_path, const std::string& obj_n
 {
     ObjReader obj_reader;
     MtlReader mtl_reader;
-    TextureReader texture_reader;
 
     ObjInfo obj_info;
 
@@ -17,11 +16,6 @@ ObjInfo ObjLoader::LoadObj(const std::string& obj_path, const std::string& obj_n
     if (!obj_info.mesh->material_lib().empty())
     {
         obj_info.materials = mtl_reader.ReadMaterials(obj_path + obj_info.mesh->material_lib());
-
-        auto textures_to_load = this->GetTexturesToLoad(obj_path, obj_info.materials);
-
-        if (textures_to_load.size() > 0)
-            obj_info.textures = texture_reader.ReadTextures(obj_path, textures_to_load);
     }
 
     return obj_info;
