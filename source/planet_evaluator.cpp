@@ -31,10 +31,10 @@ void PlanetEvaluator::Evaluate(const GeodesicSphere& sphere, const WorldBuilder&
 
 bool PlanetEvaluator::Succeeds(const Challenge& challenge) const
 {
-    return abs(this->grass_percentage_ - challenge.grass_percentage_) < challenge.tolerable_error_ &&
-           abs(this->water_percentage_ - challenge.water_percentage_) < challenge.tolerable_error_ &&
-           abs(this->sand_percentage_ - challenge.sand_percentage_) < challenge.tolerable_error_ &&
-           abs(this->vegetation_percentage_ - challenge.vegetation_percentage_) < challenge.tolerable_error_;
+    return abs(this->grass_percentage_ - challenge.grass_percentage_) <= challenge.tolerable_error_ &&
+           abs(this->water_percentage_ - challenge.water_percentage_) <= challenge.tolerable_error_ &&
+           abs(this->sand_percentage_ - challenge.sand_percentage_) <= challenge.tolerable_error_ &&
+           abs(this->vegetation_percentage_ - challenge.vegetation_percentage_) <= challenge.tolerable_error_;
 }
 
 const float& PlanetEvaluator::grass_percentage() const { return this->grass_percentage_; }
