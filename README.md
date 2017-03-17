@@ -6,7 +6,7 @@ All of this was made in about one week!!
 
 It ended up looking pretty good :) 
 
-####Build instructions
+#### Build instructions
 ```bash
 # Install dependencies
 sudo apt-get install libglfw3-dev libglew-dev
